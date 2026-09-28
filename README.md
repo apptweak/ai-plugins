@@ -180,6 +180,5 @@ Bump `version` in `plugins/<name>/plugin.json` using semver, mirror it in `.clau
 
 ### Open TODOs
 
-- **Codex catalog categories:** `Productivity` and `Coding` are provisional, because OpenAI hasn't published the list of allowed values.
 - **Public ChatGPT listing:** needs a registered ChatGPT app ID for each MCP server, referenced through `.app.json`. The privacy policy and terms URLs are already set in `extensions.com.openai.interface`.
 - **Cursor and Copilot:** test installation end to end.

@@ -27,6 +27,7 @@ This is the official AppTweak plugin marketplace (`apptweak`). It contains two p
   - Frontmatter keys: `name` (must equal the directory name), `description` (1024 characters or fewer), and optionally `license`, `compatibility`, `metadata`, `allowed-tools`.
   - Don't add client-only keys such as `disable-model-invocation`.
 - **Client-specific metadata** goes under `extensions.<reverse-domain>`, for example `extensions.com.openai.interface`. The spec doesn't allow new top-level keys.
+- **OpenAI `category`** must be one of the Title Case values used in OpenAI's curated catalog (github.com/openai/plugins): `Developer Tools`, `Productivity`, `Creativity`, `Communication`, `Education & Research`, `Data & Analytics`, `Finance`, `Security`, `Business & Operations`, `Scientific Research`. Keep `extensions.com.openai.interface.category` and the `.agents/plugins/marketplace.json` entry identical.
 - **Claude Code** doesn't read the Agent Plugins manifest. `.claude-plugin/plugin.json` must keep `"mcpServers": "./mcp.json"`.
 - **Plugin and skill names:** lowercase kebab-case. Skill names must be unique across plugins, which is why each plugin uses the `<plugin>-guidance` pattern.
 

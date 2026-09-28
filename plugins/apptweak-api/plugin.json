@@ -24,7 +24,7 @@
         "shortDescription": "Search the AppTweak API docs and run API requests while you code.",
         "longDescription": "Build software on top of the AppTweak API: search and read the API documentation, find the right endpoint and parameters, and execute API requests directly from your coding agent. Designed for developers writing integrations, scripts, and automations.",
         "developerName": "AppTweak",
-        "category": "Coding",
+        "category": "Developer Tools",
         "websiteURL": "https://www.apptweak.com",
         "privacyPolicyURL": "https://www.apptweak.com/en/legal/privacy-policy",
         "termsOfServiceURL": "https://www.apptweak.com/en/legal/terms-of-services",
