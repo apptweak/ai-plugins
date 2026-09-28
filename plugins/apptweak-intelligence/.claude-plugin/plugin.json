@@ -1,0 +1,14 @@
+{
+  "name": "apptweak-intelligence",
+  "displayName": "AppTweak Intelligence",
+  "version": "0.1.0",
+  "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
+  "author": {
+    "name": "AppTweak",
+    "url": "https://www.apptweak.com"
+  },
+  "homepage": "https://www.apptweak.com",
+  "repository": "https://github.com/apptweak/ai-plugins",
+  "keywords": ["apptweak", "aso", "app-store", "google-play", "keywords", "competitors", "market-intelligence"],
+  "mcpServers": "./mcp.json"
+}

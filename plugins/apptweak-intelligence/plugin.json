@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "apptweak-intelligence",
+  "version": "0.1.0",
+  "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
+  "author": {
+    "name": "AppTweak",
+    "url": "https://www.apptweak.com"
+  },
+  "homepage": "https://www.apptweak.com",
+  "repository": "https://github.com/apptweak/ai-plugins",
+  "keywords": [
+    "apptweak",
+    "aso",
+    "app-store",
+    "google-play",
+    "keywords",
+    "competitors",
+    "market-intelligence"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AppTweak Intelligence",
+        "shortDescription": "Analyze apps, keywords, competitors, and markets with AppTweak data.",
+        "longDescription": "Ask questions in plain language and get answers backed by AppTweak data: investigate an app, compare competitors, research keywords, explore a market, and answer App Store Optimization questions. Designed for interactive, AI-assisted analysis.",
+        "developerName": "AppTweak",
+        "category": "Productivity",
+        "websiteURL": "https://www.apptweak.com",
+        "privacyPolicyURL": "https://www.apptweak.com/en/legal/privacy-policy",
+        "termsOfServiceURL": "https://www.apptweak.com/en/legal/terms-of-services",
+        "defaultPrompt": [
+          "Compare the top competitors of my app and tell me who is growing fastest.",
+          "Which keywords should my app investigate in the US App Store?",
+          "Summarize what users complain about most in my app's recent reviews."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      }
+    }
+  }
+}

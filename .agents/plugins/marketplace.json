@@ -1,0 +1,20 @@
+{
+  "name": "apptweak",
+  "interface": {
+    "displayName": "AppTweak"
+  },
+  "plugins": [
+    {
+      "name": "apptweak-intelligence",
+      "source": { "source": "local", "path": "./plugins/apptweak-intelligence" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "Productivity"
+    },
+    {
+      "name": "apptweak-api",
+      "source": { "source": "local", "path": "./plugins/apptweak-api" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
+      "category": "Coding"
+    }
+  ]
+}

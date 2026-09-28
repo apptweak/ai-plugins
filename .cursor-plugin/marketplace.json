@@ -1,0 +1,54 @@
+{
+  "name": "apptweak",
+  "owner": {
+    "name": "AppTweak"
+  },
+  "metadata": {
+    "description": "Official AppTweak AI plugins: skills and MCP servers for AppTweak data and the AppTweak API."
+  },
+  "plugins": [
+    {
+      "name": "apptweak-intelligence",
+      "source": "plugins/apptweak-intelligence",
+      "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
+      "version": "0.1.0",
+      "author": {
+        "name": "AppTweak"
+      },
+      "homepage": "https://www.apptweak.com",
+      "repository": "https://github.com/apptweak/ai-plugins",
+      "keywords": [
+        "apptweak",
+        "aso",
+        "app-store",
+        "google-play",
+        "keywords",
+        "competitors",
+        "market-intelligence"
+      ],
+      "category": "productivity",
+      "logo": "plugins/apptweak-intelligence/assets/logo.png"
+    },
+    {
+      "name": "apptweak-api",
+      "source": "plugins/apptweak-api",
+      "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
+      "version": "0.1.0",
+      "author": {
+        "name": "AppTweak"
+      },
+      "homepage": "https://www.apptweak.com",
+      "repository": "https://github.com/apptweak/ai-plugins",
+      "keywords": [
+        "apptweak",
+        "api",
+        "developer",
+        "aso",
+        "integration",
+        "rest"
+      ],
+      "category": "developer-tools",
+      "logo": "plugins/apptweak-api/assets/logo.png"
+    }
+  ]
+}

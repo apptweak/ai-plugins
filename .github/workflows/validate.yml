@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check manifests, cross-manifest drift, skills and secrets
+        run: python3 scripts/validate.py
+
+      - name: Validate canonical manifests against pinned Agent Plugins 1.0.0 schemas
+        run: |
+          pipx run check-jsonschema==0.33.0 \
+            --schemafile scripts/schemas/agent-plugins-1.0.0/plugin.schema.json \
+            plugins/*/plugin.json
+          pipx run check-jsonschema==0.33.0 \
+            --schemafile scripts/schemas/agent-plugins-1.0.0/mcp.schema.json \
+            plugins/*/mcp.json

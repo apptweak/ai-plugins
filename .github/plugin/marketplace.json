@@ -1,0 +1,21 @@
+{
+  "name": "apptweak",
+  "owner": { "name": "AppTweak" },
+  "metadata": {
+    "description": "Official AppTweak AI plugins: skills and MCP servers for AppTweak data and the AppTweak API."
+  },
+  "plugins": [
+    {
+      "name": "apptweak-intelligence",
+      "source": "./plugins/apptweak-intelligence",
+      "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "apptweak-api",
+      "source": "./plugins/apptweak-api",
+      "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
+      "version": "0.1.0"
+    }
+  ]
+}

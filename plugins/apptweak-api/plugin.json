@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "apptweak-api",
+  "version": "0.1.0",
+  "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
+  "author": {
+    "name": "AppTweak",
+    "url": "https://www.apptweak.com"
+  },
+  "homepage": "https://www.apptweak.com",
+  "repository": "https://github.com/apptweak/ai-plugins",
+  "keywords": [
+    "apptweak",
+    "api",
+    "developer",
+    "aso",
+    "integration",
+    "rest"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AppTweak API",
+        "shortDescription": "Search the AppTweak API docs and run API requests while you code.",
+        "longDescription": "Build software on top of the AppTweak API: search and read the API documentation, find the right endpoint and parameters, and execute API requests directly from your coding agent. Designed for developers writing integrations, scripts, and automations.",
+        "developerName": "AppTweak",
+        "category": "Coding",
+        "websiteURL": "https://www.apptweak.com",
+        "privacyPolicyURL": "https://www.apptweak.com/en/legal/privacy-policy",
+        "termsOfServiceURL": "https://www.apptweak.com/en/legal/terms-of-services",
+        "defaultPrompt": [
+          "Which AppTweak API endpoint returns keyword rankings for an app?",
+          "Write a Python script that fetches my app's daily downloads from the AppTweak API.",
+          "Explain the parameters of the AppTweak app metadata endpoint and run an example request."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      }
+    }
+  }
+}
