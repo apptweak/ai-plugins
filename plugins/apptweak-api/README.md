@@ -33,7 +33,7 @@ Just want *answers* from AppTweak data, without writing code? Use the sibling pl
 
 ## Logo assets
 
-`assets/logo.png` is the final logo: the blue developer/API variant of the AppTweak branding. It is referenced from:
+`assets/logo.png` is the final logo: the developer/API variant of the AppTweak branding. It is referenced from:
 - `plugin.json` → `extensions.com.openai.interface.logo` and `composerIcon` (for OpenAI);
 - `.cursor-plugin/marketplace.json` → the plugin entry's `"logo"` field (for Cursor).
 
