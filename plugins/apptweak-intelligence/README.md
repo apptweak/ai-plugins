@@ -1,4 +1,4 @@
-# AppTweak Intelligence
+# AppTweak
 
 Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.
 

@@ -6,10 +6,10 @@ The official [AppTweak](https://www.apptweak.com) plugin marketplace for AI assi
 
 | Plugin | Use it to | Best for |
 |---|---|---|
-| **AppTweak Intelligence**<br>`apptweak-intelligence` | Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data. | Marketers, ASO specialists, analysts: interactive research and analysis in conversation. |
+| **AppTweak**<br>`apptweak-intelligence` | Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data. | Marketers, ASO specialists, analysts: interactive research and analysis in conversation. |
 | **AppTweak API**<br>`apptweak-api` | Explore the AppTweak API documentation and execute API requests from your coding agent. | Developers: building integrations, scripts, and automations on the AppTweak API. |
 
-**Which one should I install?** If you want *answers* from AppTweak data, install **AppTweak Intelligence**. If you want to *build software* that uses the AppTweak API, install **AppTweak API**. You can install both; each plugin knows about the other and will point you to it when it's the better fit.
+**Which one should I install?** If you want *answers* from AppTweak data, install **AppTweak**. If you want to *build software* that uses the AppTweak API, install **AppTweak API**. You can install both; each plugin knows about the other and will point you to it when it's the better fit.
 
 ## Compatibility
 
@@ -82,7 +82,7 @@ Cursor team marketplaces are managed from the dashboard and require a Teams or E
 
 1. Open the Cursor dashboard → **Plugins & MCPs** → **Add Marketplace**.
 2. Choose **Import from Repo** and select `https://github.com/apptweak/ai-plugins`.
-3. Team members can then install **AppTweak Intelligence** and/or **AppTweak API** from the marketplace panel.
+3. Team members can then install **AppTweak** and/or **AppTweak API** from the marketplace panel.
 
 ## Authentication
 
@@ -90,14 +90,14 @@ Both plugins connect to hosted AppTweak MCP servers:
 
 | Plugin | MCP endpoint |
 |---|---|
-| AppTweak Intelligence | `https://app.apptweak.com/mcp` |
+| AppTweak | `https://app.apptweak.com/mcp` |
 | AppTweak API | `https://app.apptweak.com/api/mcp` |
 
 You sign in with your AppTweak account through your client's standard MCP authentication flow, usually the first time a tool is used. This repository contains no API keys, tokens, or other credentials, and none are needed to install.
 
 ## Usage model
 
-- **AppTweak Intelligence:** usage is tied to the individual AppTweak user and isn't shared across your company. Your available usage depends on your AppTweak subscription, and the allowance resets every 24 hours.
+- **AppTweak plugin:** usage is tied to the individual AppTweak user and isn't shared across your company. Your available usage depends on your AppTweak subscription, and the allowance resets every 24 hours.
 - **AppTweak API:** documentation search, reading, and navigation tools are free. Executing an API request consumes your company's normal AppTweak API credits for that request. API credits are shared company-wide and reset monthly.
 
 ---
