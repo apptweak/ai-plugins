@@ -21,7 +21,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "AppTweak Intelligence",
+        "displayName": "AppTweak",
         "shortDescription": "Analyze apps, keywords, competitors, and markets with AppTweak data.",
         "longDescription": "Ask questions in plain language and get answers backed by AppTweak data: investigate an app, compare competitors, research keywords, explore a market, and answer App Store Optimization questions. Designed for interactive, AI-assisted analysis.",
         "developerName": "AppTweak",

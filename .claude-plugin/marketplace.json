@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "apptweak-intelligence",
-      "displayName": "AppTweak Intelligence",
+      "displayName": "AppTweak",
       "source": "./plugins/apptweak-intelligence",
       "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data."
     },

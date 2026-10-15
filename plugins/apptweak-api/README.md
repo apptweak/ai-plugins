@@ -10,14 +10,14 @@ This plugin is for **developers building software on the AppTweak API**: integra
 - explain parameters and API behavior;
 - run real requests while you write and debug code.
 
-Just want *answers* from AppTweak data, without writing code? Use the sibling plugin [AppTweak Intelligence](../apptweak-intelligence/).
+Just want *answers* from AppTweak data, without writing code? Use the sibling plugin [AppTweak](../apptweak-intelligence/).
 
 ## What's included
 
 | Component | Details |
 |---|---|
 | MCP server `apptweak-api` | `https://app.apptweak.com/api/mcp` (streamable HTTP). It offers a small set of developer tools: documentation search and reading, endpoint discovery, and API request execution. |
-| Skill `apptweak-api-guidance` | Explains how this plugin differs from AppTweak Intelligence. It lets the assistant suggest AppTweak Intelligence for purely analytical questions. |
+| Skill `apptweak-api-guidance` | Explains how this plugin differs from the AppTweak plugin. It lets the assistant suggest the AppTweak plugin for purely analytical questions. |
 
 **Authentication:** you sign in with your AppTweak account through your client's MCP authentication flow. **Usage:** documentation tools are free. Executing an API request consumes your company's normal AppTweak API credits, which are shared company-wide and reset monthly.
 
