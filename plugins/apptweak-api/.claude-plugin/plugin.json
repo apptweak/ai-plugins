@@ -1,7 +1,7 @@
 {
   "name": "apptweak-api",
   "displayName": "AppTweak API",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
   "author": {
     "name": "AppTweak",

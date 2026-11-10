@@ -1,7 +1,7 @@
 {
-  "name": "apptweak-intelligence",
+  "name": "apptweak",
   "displayName": "AppTweak",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
   "author": {
     "name": "AppTweak",
