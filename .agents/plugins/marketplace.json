@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "apptweak-intelligence",
+      "name": "apptweak",
       "source": {
         "source": "local",
-        "path": "./plugins/apptweak-intelligence"
+        "path": "./plugins/apptweak"
       },
       "policy": {
         "installation": "AVAILABLE",

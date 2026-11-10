@@ -176,8 +176,8 @@ def check_canonical_mcp(plugin_dir: Path) -> dict[str, str]:
                 error(path, f"mcpServers.{server_name} has unknown key {key!r}")
     if len(urls) != 1:
         error(path, "each AppTweak plugin must declare exactly one MCP server")
-    if plugin_dir.name not in urls:
-        error(path, f"MCP server should be named after the plugin ({plugin_dir.name!r})")
+    if f"{plugin_dir.name}-mcp" not in urls:
+        error(path, f"MCP server must be named {plugin_dir.name + '-mcp'!r}")
     return urls
 
 

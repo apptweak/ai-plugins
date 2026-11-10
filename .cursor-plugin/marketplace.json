@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "name": "apptweak-intelligence",
-      "source": "plugins/apptweak-intelligence",
+      "name": "apptweak",
+      "source": "plugins/apptweak",
       "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "AppTweak"
       },
@@ -27,13 +27,13 @@
         "market-intelligence"
       ],
       "category": "productivity",
-      "logo": "plugins/apptweak-intelligence/assets/logo.png"
+      "logo": "plugins/apptweak/assets/logo.png"
     },
     {
       "name": "apptweak-api",
       "source": "plugins/apptweak-api",
       "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "AppTweak"
       },

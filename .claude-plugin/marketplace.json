@@ -7,9 +7,9 @@
   "description": "Official AppTweak AI plugins: skills and MCP servers for AppTweak data and the AppTweak API.",
   "plugins": [
     {
-      "name": "apptweak-intelligence",
+      "name": "apptweak",
       "displayName": "AppTweak",
-      "source": "./plugins/apptweak-intelligence",
+      "source": "./plugins/apptweak",
       "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data."
     },
     {

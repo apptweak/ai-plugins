@@ -1,5 +1,5 @@
 ---
-name: apptweak-intelligence-guidance
+name: apptweak-guidance
 description: Explains the two AppTweak AI plugins — the AppTweak plugin (this plugin; interactive analysis of AppTweak data) and AppTweak API (for developers building on the AppTweak API) — and when each is the right fit. Use when deciding which AppTweak capability to use; when the user asks for AppTweak data, metrics, or ASO/market/competitor/keyword analysis; when the user wants to write code, scripts, automations, or integrations that use AppTweak data, or asks about AppTweak API endpoints, API access, or API credits; when the user asks how the AppTweak plugins, MCP servers, or AI capabilities differ; or when a request seems better suited to the other AppTweak plugin.
 ---
 
@@ -38,7 +38,7 @@ The user is:
 - debugging an AppTweak API integration
 - looking for a deterministic, programmatic interface
 
-AppTweak API's MCP focuses on documentation discovery and API execution; the actual API response is the developer-facing interface.
+AppTweak API MCP focuses on documentation discovery and API execution; the actual API response is the developer-facing interface.
 
 ## Routing behavior
 

@@ -19,8 +19,8 @@ Want to **build software** on the AppTweak API instead? Use the sibling plugin [
 
 | Component | Details |
 |---|---|
-| MCP server `apptweak-intelligence` | `https://app.apptweak.com/mcp` (streamable HTTP). It offers many granular tools that return compact, LLM-oriented data for analysis in context. |
-| Skill `apptweak-intelligence-guidance` | Explains how this plugin differs from AppTweak API. It lets the assistant suggest AppTweak API when a request is really about writing code. |
+| MCP server `apptweak-mcp` (AppTweak MCP) | `https://app.apptweak.com/mcp` (streamable HTTP). It offers many granular tools that return compact, LLM-oriented data for analysis in context. |
+| Skill `apptweak-guidance` | Explains how this plugin differs from AppTweak API. It lets the assistant suggest AppTweak API when a request is really about writing code. |
 
 **Authentication:** you sign in with your AppTweak account through your client's MCP authentication flow. **Usage:** it's per user, depends on your subscription, and resets every 24 hours.
 

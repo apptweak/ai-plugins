@@ -6,7 +6,7 @@ The official [AppTweak](https://www.apptweak.com) plugin marketplace for AI assi
 
 | Plugin | Use it to | Best for |
 |---|---|---|
-| **AppTweak**<br>`apptweak-intelligence` | Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data. | Marketers, ASO specialists, analysts: interactive research and analysis in conversation. |
+| **AppTweak**<br>`apptweak` | Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data. | Marketers, ASO specialists, analysts: interactive research and analysis in conversation. |
 | **AppTweak API**<br>`apptweak-api` | Explore the AppTweak API documentation and execute API requests from your coding agent. | Developers: building integrations, scripts, and automations on the AppTweak API. |
 
 **Which one should I install?** If you want *answers* from AppTweak data, install **AppTweak**. If you want to *build software* that uses the AppTweak API, install **AppTweak API**. You can install both; each plugin knows about the other and will point you to it when it's the better fit.
@@ -31,7 +31,7 @@ Every client loads the same skills and the same MCP endpoint. The table shows wh
 ```sh
 codex plugin marketplace add apptweak/ai-plugins
 codex plugin list                                   # browse
-codex plugin add apptweak-intelligence@apptweak
+codex plugin add apptweak@apptweak
 codex plugin add apptweak-api@apptweak
 ```
 
@@ -45,7 +45,7 @@ Inside a session:
 
 ```
 /plugin marketplace add apptweak/ai-plugins
-/plugin install apptweak-intelligence@apptweak
+/plugin install apptweak@apptweak
 /plugin install apptweak-api@apptweak
 ```
 
@@ -53,7 +53,7 @@ Or from the shell:
 
 ```sh
 claude plugin marketplace add apptweak/ai-plugins
-claude plugin install apptweak-intelligence@apptweak
+claude plugin install apptweak@apptweak
 claude plugin install apptweak-api@apptweak
 ```
 
@@ -64,7 +64,7 @@ Run `/plugin` to browse. On **Claude.ai / Claude Desktop / Cowork**, go to **Cus
 ```sh
 copilot plugin marketplace add apptweak/ai-plugins
 copilot plugin marketplace browse apptweak
-copilot plugin install apptweak-intelligence@apptweak
+copilot plugin install apptweak@apptweak
 copilot plugin install apptweak-api@apptweak
 ```
 
@@ -88,10 +88,10 @@ Cursor team marketplaces are managed from the dashboard and require a Teams or E
 
 Both plugins connect to hosted AppTweak MCP servers:
 
-| Plugin | MCP endpoint |
+| MCP server | Endpoint |
 |---|---|
-| AppTweak | `https://app.apptweak.com/mcp` |
-| AppTweak API | `https://app.apptweak.com/api/mcp` |
+| AppTweak MCP (`apptweak-mcp`) | `https://app.apptweak.com/mcp` |
+| AppTweak API MCP (`apptweak-api-mcp`) | `https://app.apptweak.com/api/mcp` |
 
 You sign in with your AppTweak account through your client's standard MCP authentication flow, usually the first time a tool is used. This repository contains no API keys, tokens, or other credentials, and none are needed to install.
 
@@ -151,7 +151,7 @@ The validator runs locally and in CI and needs Python 3.9+ with the standard lib
 - all four catalogs list exactly the plugins in `plugins/`, with valid sources;
 - names, versions, descriptions, and metadata agree across the canonical manifests and adapters;
 - manifests use the pinned Agent Plugins 1.0.0 schemas;
-- each plugin has one `streamable-http` MCP server on `app.apptweak.com`, with no headers;
+- each plugin has one `streamable-http` MCP server named `<plugin>-mcp` on `app.apptweak.com`, with no headers;
 - the required guidance skill exists and skill frontmatter is valid;
 - skill names don't collide;
 - referenced paths exist;
@@ -163,7 +163,7 @@ Optional local checks with vendor tools:
 
 ```sh
 claude plugin validate . --strict
-claude plugin validate plugins/apptweak-intelligence --strict
+claude plugin validate plugins/apptweak --strict
 pipx run --spec skills-ref agentskills validate plugins/apptweak-api/skills/apptweak-api-guidance
 ```
 

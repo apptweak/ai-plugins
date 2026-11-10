@@ -4,7 +4,7 @@ This file is for AI agents and maintainers working in this repository. Read the 
 
 ## What this repo is
 
-This is the official AppTweak plugin marketplace (`apptweak`). It contains two plugins, `apptweak-intelligence` and `apptweak-api`. Each plugin is one **Agent Plugins 1.0** package: skills plus one remote MCP server. Four vendor catalogs expose the packages to Codex/ChatGPT, Claude, Cursor, and GitHub Copilot. The repo holds JSON and Markdown, plus one standard-library Python validator. There is no build step.
+This is the official AppTweak plugin marketplace (`apptweak`). It contains two plugins, `apptweak` and `apptweak-api`. Each plugin is one **Agent Plugins 1.0** package: skills plus one remote MCP server. Four vendor catalogs expose the packages to Codex/ChatGPT, Claude, Cursor, and GitHub Copilot. The repo holds JSON and Markdown, plus one standard-library Python validator. There is no build step.
 
 ## Hard rules
 
