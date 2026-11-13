@@ -9,7 +9,7 @@
       "name": "apptweak",
       "source": "./plugins/apptweak",
       "description": "Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data.",
-      "version": "0.2.0"
+      "version": "0.2.1"
     },
     {
       "name": "apptweak-api",
