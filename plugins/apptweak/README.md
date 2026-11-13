@@ -36,8 +36,10 @@ Want to **build software** on the AppTweak API instead? Use the sibling plugin [
 
 ## Logo assets
 
-`assets/logo.png` is the final logo and uses the standard AppTweak branding. It is referenced from:
+![AppTweak logo](assets/logo.png)
+
+The logo above, in the assets folder, is the final logo and uses the standard AppTweak branding. It is referenced from:
 - `plugin.json` → `extensions.com.openai.interface.logo` and `composerIcon` (for OpenAI);
 - `.cursor-plugin/marketplace.json` → the plugin entry's `"logo"` field (for Cursor).
 
-To replace it, overwrite `assets/logo.png` and keep the same filename. If you rename it, update both references and run `python3 scripts/validate.py`, which checks that referenced files exist.
+To replace it, overwrite that file and keep its name. If you rename it, update both references and run `python3 scripts/validate.py`, which checks that referenced files exist.

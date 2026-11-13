@@ -13,7 +13,7 @@ This is the official AppTweak plugin marketplace (`apptweak`). It contains two p
 - **Never duplicate skills per client.** All clients read the same `skills/<name>/SKILL.md`.
 - **Never add a second MCP config** (such as `.mcp.json`) unless a client provably needs it. If you add one, it must match `mcp.json`, and the validator enforces this.
 - **No secrets or `headers` in MCP configs.** Clients handle authentication through their MCP auth flow.
-- **Don't invent metadata:** no support emails, ChatGPT app IDs (`.app.json`), licenses, or logos. The privacy policy and terms URLs are the official AppTweak ones already set in each `plugin.json`; don't change them without confirmation. Leave them as documented TODOs. Logos live in `plugins/<plugin>/assets/logo.png` and are provided by AppTweak.
+- **Don't invent metadata:** no support emails, ChatGPT app IDs (`.app.json`), or logos. The license is Apache-2.0: the root `LICENSE` file and `license` in every `plugin.json`. Don't change it without confirmation. The privacy policy and terms URLs are the official AppTweak ones already set in each `plugin.json`; don't change them without confirmation. Leave them as documented TODOs. Logos live in `plugins/<plugin>/assets/logo.png` and are provided by AppTweak.
 - **Don't add frameworks, package managers, or build tooling.**
 - **Run `python3 scripts/validate.py` before you finish any change.** It must print `OK`.
 
@@ -28,7 +28,8 @@ This is the official AppTweak plugin marketplace (`apptweak`). It contains two p
   - Don't add client-only keys such as `disable-model-invocation`.
 - **Client-specific metadata** goes under `extensions.<reverse-domain>`, for example `extensions.com.openai.interface`. The spec doesn't allow new top-level keys.
 - **OpenAI `category`** must be one of the Title Case values used in OpenAI's curated catalog (github.com/openai/plugins): `Developer Tools`, `Productivity`, `Creativity`, `Communication`, `Education & Research`, `Data & Analytics`, `Finance`, `Security`, `Business & Operations`, `Scientific Research`. Keep `extensions.com.openai.interface.category` and the `.agents/plugins/marketplace.json` entry identical.
-- **Claude Code** doesn't read the Agent Plugins manifest. `.claude-plugin/plugin.json` must keep `"mcpServers": "./mcp.json"`.
+- **Claude Code** doesn't read the Agent Plugins manifest. `.claude-plugin/plugin.json` must keep `"mcpServers": "./mcp.json"`. It also sets `privacyPolicyUrl`, equal to `extensions.com.openai.interface.privacyPolicyURL`, because the Claude directory warns without it.
+- **Claude directory:** in a plugin folder, show a bundled image in a README with Markdown image syntax only. Writing its path in backticks or a code block puts the plugin on hold for review.
 - **Plugin and skill names:** lowercase kebab-case. Skill names must be unique across plugins, which is why each plugin uses the `<plugin>-guidance` pattern.
 
 ## Conventions
