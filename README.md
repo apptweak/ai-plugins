@@ -100,6 +100,10 @@ You sign in with your AppTweak account through your client's standard MCP authen
 - **AppTweak plugin:** usage is tied to the individual AppTweak user and isn't shared across your company. Your available usage depends on your AppTweak subscription, and the allowance resets every 24 hours.
 - **AppTweak API:** documentation search, reading, and navigation tools are free. Executing an API request consumes your company's normal AppTweak API credits for that request. API credits are shared company-wide and reset monthly.
 
+## License
+
+The plugins in this repository are released under the [Apache License 2.0](LICENSE). The license grants no rights to the AppTweak name or logos.
+
 ---
 
 ## For maintainers
@@ -131,7 +135,7 @@ Each plugin is defined **once**, in the [Agent Plugins 1.0](https://agent-plugin
 
 What an adapter may duplicate:
 - **Marketplace catalogs:** plugin name, source path, short description, and version (where the format has one).
-- **`.claude-plugin/plugin.json`:** name, displayName, version, description, author, homepage, repository, and keywords. It sets `"mcpServers": "./mcp.json"`, so there is no second MCP config.
+- **`.claude-plugin/plugin.json`:** name, displayName, version, description, author, homepage, repository, license, and keywords, plus `privacyPolicyUrl`, which the Claude directory listing reads and which mirrors `extensions.com.openai.interface.privacyPolicyURL`. It sets `"mcpServers": "./mcp.json"`, so there is no second MCP config.
 - **Skills:** never duplicated.
 
 Files deliberately **not** included:

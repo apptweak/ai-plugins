@@ -46,7 +46,7 @@ SKILL_NAME_RE = re.compile(r"^(?!.*--)[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 
 # Metadata that the Claude adapter duplicates and must keep identical.
 CLAUDE_SYNCED_KEYS = ("name", "version", "description", "author", "homepage",
-                      "repository", "keywords")
+                      "repository", "license", "keywords")
 
 SECRET_PATTERNS = [
     (re.compile(r"(?i)\bbearer\s+[a-z0-9._~+/=-]{8,}"), "bearer token"),
@@ -189,9 +189,13 @@ def check_claude_adapter(plugin_dir: Path, canonical: dict, mcp_urls: dict[str, 
     for key in CLAUDE_SYNCED_KEYS:
         if adapter.get(key) != canonical.get(key):
             error(path, f"{key} differs from canonical plugin.json")
-    display = canonical.get("extensions", {}).get("com.openai", {}).get("interface", {}).get("displayName")
+    interface = canonical.get("extensions", {}).get("com.openai", {}).get("interface", {})
+    display = interface.get("displayName")
     if display and adapter.get("displayName") != display:
         error(path, "displayName differs from extensions.com.openai.interface.displayName")
+    # The Claude directory lists the plugin with this URL and warns when it is missing.
+    if adapter.get("privacyPolicyUrl") != interface.get("privacyPolicyURL"):
+        error(path, "privacyPolicyUrl differs from extensions.com.openai.interface.privacyPolicyURL")
     if adapter.get("mcpServers") != "./mcp.json":
         error(path, "mcpServers must be './mcp.json' so Claude reuses the canonical MCP config")
 
