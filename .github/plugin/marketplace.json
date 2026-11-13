@@ -15,7 +15,7 @@
       "name": "apptweak-api",
       "source": "./plugins/apptweak-api",
       "description": "Explore the AppTweak API documentation and execute API requests from your coding agent.",
-      "version": "0.2.0"
+      "version": "0.3.0"
     }
   ]
 }
