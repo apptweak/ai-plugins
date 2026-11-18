@@ -24,6 +24,7 @@ The user is:
 - constructing or testing an API request
 - debugging an AppTweak API integration
 - looking for a deterministic, programmatic interface
+- building a dashboard, demo, or internal tool on live AppTweak data (follow the `apptweak-dashboard-builder` skill)
 
 Use this plugin's MCP tools to search and read the AppTweak API documentation, find the right endpoint, and execute requests. The API response you get back is the real developer-facing interface — base code on it.
 
