@@ -22,11 +22,12 @@
     "com.openai": {
       "interface": {
         "displayName": "AppTweak API",
-        "shortDescription": "Search the AppTweak API docs and run API requests while you code.",
+        "shortDescription": "Build with the AppTweak API",
         "longDescription": "Build software on top of the AppTweak API: search and read the API documentation, find the right endpoint and parameters, and execute API requests directly from your coding agent. Designed for developers writing integrations, scripts, and automations.",
         "developerName": "AppTweak",
         "category": "Developer Tools",
         "websiteURL": "https://www.apptweak.com",
+        "supportURL": "https://help.apptweak.com/en/",
         "privacyPolicyURL": "https://www.apptweak.com/en/legal/privacy-policy",
         "termsOfServiceURL": "https://www.apptweak.com/en/legal/terms-of-services",
         "defaultPrompt": [
@@ -36,6 +37,56 @@
         ],
         "logo": "./assets/logo.png",
         "composerIcon": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Finds an endpoint in the API documentation and explains its parameters and credit cost, without running a request.",
+              "prompt": "Which AppTweak API endpoint gives me the keyword ranking history of an app, and what parameters does it take?",
+              "tools_triggered": "start-here-guide, search-endpoints, get-endpoint",
+              "expected_behavior": "Names GET /apps/keywords-rankings/history.json in the App Store API. Lists the required parameters (apps, keywords, metrics) and the optional ones (country, language, device, start_date, end_date). Notes the limits of 5 apps and 5 keywords per call and the cost of 5 credits per app and metric. Does not call execute-request."
+            },
+            {
+              "description": "Runs a free live request to check the company's API credit balance.",
+              "prompt": "How many AppTweak API credits does my company have left this month, and when do they renew?",
+              "tools_triggered": "start-here-guide, execute-request",
+              "expected_behavior": "Calls GET https://public-api.apptweak.com/api/public/apptweak/usage/credits, which costs 0 credits. Reports the remaining monthly credits (current_monthly_api_credits), any additional credits, and the next renewal date from the response."
+            },
+            {
+              "description": "Resolves an app name to its store ID, then runs a data request with that ID.",
+              "prompt": "Find Spotify's App Store ID in the US and show its average rating for each of the last 7 days.",
+              "tools_triggered": "start-here-guide, execute-request",
+              "expected_behavior": "First calls GET /user/resolve_app_id_by_app_name with query=Spotify and country=us, and picks the iOS candidate whose title matches Spotify. Then calls GET /apps/metrics/history.json with that app ID, metrics=ratings, country=us, device=iphone and a 7-day start_date and end_date. Shows the average rating for each day and the credits each call cost (metadata.request.cost)."
+            },
+            {
+              "description": "Writes integration code based on the endpoint's documented parameters and response shape.",
+              "prompt": "Write a Python script that prints the top 10 free iPhone games in the US from the AppTweak API, reading the API key from the APPTWEAK_API_KEY environment variable.",
+              "tools_triggered": "start-here-guide, get-endpoint",
+              "expected_behavior": "Returns a runnable Python script that calls GET https://public-api.apptweak.com/api/public/store/charts/top-results/current.json with the x-apptweak-key header and categories=6014 (Games), types=free, country=us, device=iphone and limit=10. The script reads the ranked app IDs from result[\"6014\"][\"free\"][\"value\"] and handles HTTP errors. If the assistant runs a test request, it costs 1 credit."
+            },
+            {
+              "description": "Helps debug an error returned by an existing API integration, using the endpoint's documentation.",
+              "prompt": "My call to /apps/metrics/history.json with metrics=downloads returns 403 EstimatesNotInPlanError. What does that mean, and how should I change my code?",
+              "tools_triggered": "start-here-guide, get-endpoint",
+              "expected_behavior": "Reads the endpoint's documentation and explains that the API plan doesn't include download and revenue estimates, and that the rejected request wasn't charged. Notes that ratings, daily-ratings and app-power still work on this endpoint. Suggests handling the error in code, and contacting AppTweak to add estimates if downloads are needed. Does not retry the failing request."
+            }
+          ],
+          "negative": [
+            {
+              "description": "A general coding task unrelated to AppTweak. The plugin should not call any AppTweak tool, and the assistant answers on its own.",
+              "prompt": "Write a Python function that checks whether a string is a palindrome."
+            },
+            {
+              "description": "Replying to store reviews isn't supported by the AppTweak API. The plugin should not call execute-request to post anything. It should explain that review replies aren't available through the API and point to App Store Connect.",
+              "prompt": "Reply \"Thanks for the feedback!\" to the latest 1-star review of my app on the App Store."
+            },
+            {
+              "description": "Plan changes and credit purchases aren't available through the API. The plugin should not run any request. It should explain that and point to https://app.apptweak.com/apt-api or the AppTweak team.",
+              "prompt": "Upgrade my company's AppTweak API plan and buy 100,000 extra credits."
+            }
+          ]
+        }
       }
     }
   }
