@@ -7,7 +7,7 @@ The official [AppTweak](https://www.apptweak.com) plugin marketplace for AI assi
 | Plugin | Use it to | Best for |
 |---|---|---|
 | **AppTweak**<br>`apptweak` | Ask questions and analyze apps, keywords, competitors, and markets using AppTweak data. | Marketers, ASO specialists, analysts: interactive research and analysis in conversation. |
-| **AppTweak API**<br>`apptweak-api` | Explore the AppTweak API documentation and execute API requests from your coding agent. | Developers: building integrations, scripts, and automations on the AppTweak API. |
+| **AppTweak API**<br>`apptweak-api` | Explore the AppTweak API documentation and execute API requests from your coding agent. | Developers: building integrations, scripts, automations, and dashboards on the AppTweak API. |
 
 **Which one should I install?** If you want *answers* from AppTweak data, install **AppTweak**. If you want to *build software* that uses the AppTweak API, install **AppTweak API**. You can install both; each plugin knows about the other and will point you to it when it's the better fit.
 
